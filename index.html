@@ -36,7 +36,7 @@ var svg = d3.select("body").append("svg:svg")
   .append("svg:g")
     .attr("transform", "translate(" + p[3] + "," + (h - p[2]) + ")");
 
-d3.csv("Insolvencies_TA.csv", function(crimea) {
+d3.csv("Insolvencies_TS.csv", function(crimea) {
 
   // Transpose the data into layers by cause.
   var causes = d3.layout.stack()(["bankruptcy", "dro", "iva"].map(function(cause) {
